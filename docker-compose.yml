@@ -4,6 +4,10 @@ services:
     image: cptactionhank/atlassian-jira:7.11.0
     networks:
       - dmz
+    environment:
+      - X_PROXY_SCHEME=https
+      - X_PROXY_NAME=jira.ericksonmarine.net
+      - X_PROXY_PORT=443
     restart: always
 
 networks:
