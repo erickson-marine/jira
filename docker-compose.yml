@@ -1,0 +1,12 @@
+version: '3'
+services:
+  jira:
+    image: jenkinsci/blueocean:7.11.0
+    networks:
+      - dmz
+    restart: always
+
+networks:
+  dmz:
+    external:
+      name: dmz
