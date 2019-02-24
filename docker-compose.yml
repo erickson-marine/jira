@@ -11,6 +11,8 @@ services:
     volumes:
       - home:/var/atlassian/jira
     user: root
+    #ports:
+    #  - 8080:8080
     restart: always
 
 volumes:
