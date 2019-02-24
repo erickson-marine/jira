@@ -8,7 +8,13 @@ services:
       - X_PROXY_SCHEME=https
       - X_PROXY_NAME=jira.ericksonmarine.net
       - X_PROXY_PORT=443
+    volumes:
+      - home:/var/atlassian/jira
+    user: root
     restart: always
+
+volumes:
+  home:
 
 networks:
   dmz:
